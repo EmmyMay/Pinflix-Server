@@ -7,6 +7,7 @@ const jsonwebtoken = require('jsonwebtoken');
 const passportStrategies = require('../passport')
 const User = require('../model/users');
 const checkauth = require('../utils/checkAuth');
+require('dotenv').config();
 
 
 
