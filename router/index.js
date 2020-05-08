@@ -45,9 +45,7 @@ r.get('/pin/tiktok', async (ctx) => {
 })
 
 
-r.get('/', (ctx) => {
-    ctx.body = "Welcome"
-})
+
 // *******************************************************************
 
 // route to handle Twitter pin posts
