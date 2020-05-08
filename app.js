@@ -25,9 +25,6 @@ app.use(passport.initialize());
 app.use(_.routes());
 app.use(cors());
 
-app.get('/', (ctx) => {
-    ctx.body = "Welcome"
-});
 
 
 // mongoose config
