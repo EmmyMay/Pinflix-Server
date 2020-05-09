@@ -239,9 +239,7 @@ r.post('/pin/register', async ctx => {
 
 })
 
-r.get('/', (ctx) => {
-    ctx.body = "Hello World"
-})
+
 
 
 module.exports = r;

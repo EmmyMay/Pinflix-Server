@@ -11,7 +11,10 @@ const helmet = require("koa-helmet");
 
 
 
-
+const koaOptions = {
+    origin: true,
+    credentials: true
+};
 
 
 
@@ -21,7 +24,7 @@ app.use(bodyparser());
 app.use(passport.initialize());
 
 app.use(_.routes());
-app.use(cors());
+app.use(cors(koaOptions));
 
 
 // mongoose config
