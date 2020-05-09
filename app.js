@@ -26,7 +26,7 @@ app.use(cors());
 // mongoose config
 
 
-mongoose.connect(node.process.env.MONGO_URI, {
+mongoose.connect(node.process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
