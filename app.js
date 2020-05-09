@@ -1,10 +1,11 @@
 const koa = require('koa');
 const app = new koa();
-const _ = require('./router')
+const _ = require('./router');
 const mongoose = require('mongoose');
 const bodyparser = require('koa-body');
 const cors = require('@koa/cors');
-const passport = require('koa-passport')
+const passport = require('koa-passport');
+
 
 
 
@@ -22,11 +23,10 @@ app.use(_.routes());
 app.use(cors());
 
 
-
 // mongoose config
 
 
-mongoose.connect(`mongodb+srv://${process.env.dbname}:${process.env.dbpass}@vue-8buqu.mongodb.net/embed?retryWrites=true&w=majority`, {
+mongoose.connect(node.process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true

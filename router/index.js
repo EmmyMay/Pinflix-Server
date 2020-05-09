@@ -1,12 +1,12 @@
 var router = require('koa-router');
 var r = router();
-const PinTweet = require('./model/twitter');
-const PinTiktok = require('./model/tiktok');
+const PinTweet = require('../model/twitter');
+const PinTiktok = require('../model/tiktok');
 const passport = require('koa-passport');
 const jsonwebtoken = require('jsonwebtoken');
-const passportStrategies = require('./passport')
-const User = require('./model/users');
-const checkauth = require('./utils/checkAuth');
+const passportStrategies = require('../passport')
+const User = require('../model/users');
+const checkauth = require('../utils/checkAuth');
 
 
 
@@ -237,6 +237,10 @@ r.post('/pin/register', async ctx => {
 
 
 
+})
+
+r.get('/', (ctx) => {
+    ctx.body = "Hello World"
 })
 
 
