@@ -1,6 +1,6 @@
 const koa = require('koa');
 const app = new koa();
-const _ = require('./router');
+const _ = require('./router')
 const mongoose = require('mongoose');
 const bodyparser = require('koa-body');
 const cors = require('@koa/cors');
