@@ -33,6 +33,7 @@ mongoose.connect(node.process.env.MONGO_URI, {
 }).catch((ctx, err) => {
     ctx.status = 500;
     ctx.body = err;
+    console.log(err);
 
 })
 mongoose.connection.once('open', () => {
