@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const bodyparser = require('koa-body');
 const cors = require('@koa/cors');
 const passport = require('koa-passport');
+const helmet = require("koa-helmet");
 
 
 
@@ -14,7 +15,7 @@ const passport = require('koa-passport');
 
 
 
-
+app.use(helmet());
 app.use(bodyparser());
 
 app.use(passport.initialize());
@@ -33,7 +34,7 @@ mongoose.connect(process.env.MONGODB_URI, {
 }).catch((ctx, err) => {
     ctx.status = 500;
     ctx.body = err;
-    console.log(err);
+
 
 })
 mongoose.connection.once('open', () => {
