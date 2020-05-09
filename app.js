@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const bodyparser = require('koa-body');
 const cors = require('@koa/cors');
 const passport = require('koa-passport')
-require('dotenv').config();
+
 
 
 
