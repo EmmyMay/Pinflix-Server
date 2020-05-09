@@ -42,9 +42,9 @@ mongoose.connect(`mongodb+srv://${process.env.dbname}:${process.env.dbpass}@vue-
 mongoose.connection.once('open', () => {
     console.log("Connection Made");
 })
-app.listen(process.env.port, () => {
+app.listen(process.env.PORT, () => {
 
-    console.log(`App listening on port ${process.env.port}!`);
+    console.log(`App listening on port ${process.env.PORT}!`);
 
 
 
